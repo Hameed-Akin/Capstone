@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera1" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera2" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera3" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera4" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera5" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera6" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera7" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera8" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera9" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera10" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera11" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera12" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera13" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera14" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera15" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_logger.launch">
+    <arg name="camera" value="camera16" />
+  </include>
+
+
+</launch>

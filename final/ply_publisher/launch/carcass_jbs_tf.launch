@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+
+<!--
+/camera1/depth/camera_info
+/camera1/depth/image_rect_raw
+-->
+
+  <include file="$(find ply_publisher)/launch/pc_jbs_convertor.launch">
+    <arg name="camera" value="camera_n1" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_jbs_convertor.launch">
+    <arg name="camera" value="camera_n2" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_jbs_convertor.launch">
+    <arg name="camera" value="camera_n3" />
+  </include>
+
+<node pkg="tf" type="static_transform_publisher" name="link_camera1_broadcaster" args="0.0000 0.0000 0.0000 0.0000 -0.0000 0.0000 interim camera_n1_rgb_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera2_broadcaster" args="-0.4030 -0.0069 -0.0014 -0.0038 -0.0010 -0.0098 interim camera_n2_rgb_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera3_broadcaster" args="-0.7993 -0.0111 -0.0031 -0.0065 0.0064 -0.0130 interim camera_n3_rgb_optical_frame 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="link_world_broadcaster" args="0 0 0 -1.570796327 0 -1.570796327 world interim 100" />
+
+</launch>

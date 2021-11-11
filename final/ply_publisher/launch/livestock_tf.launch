@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<launch>
+
+<!--
+/camera1/depth/camera_info
+/camera1/depth/image_rect_raw
+-->
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera1" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera2" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera3" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera4" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera5" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera6" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera7" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera8" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera9" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera10" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera11" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera12" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera13" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera14" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera15" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_convertor.launch">
+    <arg name="camera" value="camera16" />
+  </include>
+
+<node pkg="tf" type="static_transform_publisher" name="link_camera1_broadcaster" args="0.0000 0.0000 0.0000 0.0000 -0.0000 0.0000 interim camera1_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera2_broadcaster" args="-0.4030 -0.0069 -0.0014 -0.0038 -0.0010 -0.0098 interim camera2_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera3_broadcaster" args="-0.7993 -0.0111 -0.0031 -0.0065 0.0064 -0.0130 interim camera3_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera4_broadcaster" args="-1.0096 -0.0051 0.1389 3.0796 -0.8587 0.0330 interim camera4_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera5_broadcaster" args="-0.0068 -0.4018 0.0001 -0.0042 0.0110 -0.0070 interim camera5_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera6_broadcaster" args="-0.4091 -0.4045 0.0012 -0.0056 0.0147 -0.0076 interim camera6_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera7_broadcaster" args="-0.8060 -0.4027 0.0070 -0.0068 0.0091 -0.0004 interim camera7_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera8_broadcaster" args="-1.0450 -0.4070 0.1966 -0.0029 0.9179 -0.0016 interim camera8_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera9_broadcaster" args="0.0233 0.0252 1.4994 0.0199 0.0361 3.1266 interim camera9_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera10_broadcaster" args="-0.3800 0.0116 1.5117 0.0188 0.0276 3.1368 interim camera10_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera11_broadcaster" args="-0.7800 0.0135 1.5233 0.0073 0.0241 3.1363 interim camera11_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera12_broadcaster" args="-1.0240 0.0162 1.3437 0.0833 -0.9341 3.1089 interim camera12_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera13_broadcaster" args="0.0368 -0.3704 1.5129 0.0215 0.0251 -3.1403 interim camera13_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera14_broadcaster" args="-0.3660 -0.3830 1.5201 0.0246 0.0209 -3.1330 interim camera14_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera15_broadcaster" args="-0.7682 -0.3920 1.5285 0.0425 0.0173 3.1318 interim camera15_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera16_broadcaster" args="-0.9931 -0.4075 1.3888 -3.0998 0.9558 -3.1181 interim camera16_depth_optical_frame 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="link_world_broadcaster" args="0 0 0 -1.570796327 0 -1.570796327 world interim 100" />
+
+</launch>

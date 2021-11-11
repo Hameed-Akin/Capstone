@@ -1,0 +1,3 @@
+/home/hameed/catkin_ws/src/human_skirting/Abdul/build/CMakeFiles/rebuild_cache.dir
+/home/hameed/catkin_ws/src/human_skirting/Abdul/build/CMakeFiles/Main.dir
+/home/hameed/catkin_ws/src/human_skirting/Abdul/build/CMakeFiles/edit_cache.dir

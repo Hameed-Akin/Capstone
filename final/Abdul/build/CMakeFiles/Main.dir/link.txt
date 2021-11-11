@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -rdynamic CMakeFiles/Main.dir/main.cpp.o -o Main  -ljsoncpp 

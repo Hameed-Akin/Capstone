@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+
+<!--
+/camera1/depth/camera_info
+/camera1/depth/image_rect_raw
+-->
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera1" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera2" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera3" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera4" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera5" />
+  </include>
+
+  <include file="$(find ply_publisher)/launch/pc_carcass_convertor.launch">
+    <arg name="camera" value="camera6" />
+  </include>
+
+
+<node pkg="tf" type="static_transform_publisher" name="link_camera1_broadcaster" args="0.0000 0.0000 0.0000 0.0000 -0.0000 0.0000 interim camera1_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera2_broadcaster" args="-0.4030 -0.0069 -0.0014 -0.0038 -0.0010 -0.0098 interim camera2_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera3_broadcaster" args="-0.7993 -0.0111 -0.0031 -0.0065 0.0064 -0.0130 interim camera3_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera4_broadcaster" args="-1.0096 -0.0051 0.1389 3.0796 -0.8587 0.0330 interim camera4_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera5_broadcaster" args="-0.0068 -0.4018 0.0001 -0.0042 0.0110 -0.0070 interim camera5_depth_optical_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="link_camera6_broadcaster" args="-0.4091 -0.4045 0.0012 -0.0056 0.0147 -0.0076 interim camera6_depth_optical_frame 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="link_world_broadcaster" args="0 0 0 -1.570796327 0 -1.570796327 world interim 100" />
+
+</launch>

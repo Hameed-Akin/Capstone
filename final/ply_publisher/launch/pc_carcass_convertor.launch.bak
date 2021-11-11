@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="camera" /> 
+
+
+  <node pkg="nodelet" type="nodelet" args="manager"
+        name="record_player_manager_$(arg camera)" output="screen"/>
+
+  <node pkg="nodelet" type="nodelet" name="cloudify_$(arg camera)"
+        args="load depth_image_proc/point_cloud_xyz record_player_manager_$(arg camera) --no-bond" output="screen">
+    <remap from="image_rect" to="$(arg camera)/depth/image_rect_raw"/>
+    <remap from="camera_info" to="$(arg camera)/depth/camera_info"/>
+    <remap from="intensity" to="$(arg camera)/infra1/image_rect_raw"/>
+    <remap from="points" to="$(arg camera)/depth_registered/points"/>
+  </node>
+
+
+  <node pkg="nodelet" type="nodelet" name="passthrough$(arg camera)" args="load pcl/PassThrough record_player_manager_$(arg camera) --no-bond" output="screen">
+    <remap from="~input" to="$(arg camera)/depth_registered/points" />
+    <remap from="~output" to="$(arg camera)/depth_filtered/points" />
+    <rosparam>
+      filter_field_name: x
+      filter_limit_min: 0.2
+      filter_limit_max: 1.2
+      filter_limit_negative: False
+      input_frame: world
+      output_frame: world
+    </rosparam>
+  </node>
+
+
+</launch>
